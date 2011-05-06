@@ -7,9 +7,11 @@ using Microsoft.Scripting.Hosting;
 
 namespace TestProject {
 	class Program {
-		static void Main(string[] args) {
-			//Module1.execute_compass();
-			ExecuteCompassCsharp();
+		static void Main(string[] args)
+		{
+			CompassHost.execute_compass("version");
+			
+			//ExecuteCompassCsharp();
 
 			Console.WriteLine("DONE");
 			Console.ReadLine();

@@ -35,4 +35,4 @@ function Invoke-Compass
 	Write-Host $text
 }
 
-Invoke-Compass -command 'version'
+Invoke-Compass -command 'help'
