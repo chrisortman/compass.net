@@ -9,7 +9,7 @@ namespace TestProject {
 	class Program {
 		static void Main(string[] args)
 		{
-			CompassHost.execute_compass("version");
+			CompassHost.execute_compass("help init");
 			
 			//ExecuteCompassCsharp();
 
@@ -23,6 +23,11 @@ namespace TestProject {
 			var ir_path =  "e:\\code\\nugetpackages\\ironruby\\lib";
 			var compass_net_path = "e:\\Code\\compass_net\\src\\compass_net\\compass_net\\Program.rb";
 
+			if(true)
+			{
+				var xxxx = 1;
+				var y = xxxx + 2;
+			}
 			var setup = IronRuby.Ruby.CreateRubySetup();
 
 			setup.Options.Add("SearchPaths", "E:\\Code\\compass_net\\tools\\compass-0.11.1\\lib");
