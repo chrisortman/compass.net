@@ -9,9 +9,9 @@ namespace TestProject {
 	class Program {
 		static void Main(string[] args)
 		{
-			CompassHost.execute_compass("help init");
+			//CompassHost.execute_compass("init --using blueprint/semantic  --trace");
 			
-			//ExecuteCompassCsharp();
+			ExecuteCompassCsharp();
 
 			Console.WriteLine("DONE");
 			Console.ReadLine();
@@ -29,12 +29,13 @@ namespace TestProject {
 				var y = xxxx + 2;
 			}
 			var setup = IronRuby.Ruby.CreateRubySetup();
-
+			
 			setup.Options.Add("SearchPaths", "E:\\Code\\compass_net\\tools\\compass-0.11.1\\lib");
 			var sr = new Microsoft.Scripting.Hosting.ScriptRuntimeSetup();
 			sr.LanguageSetups.Add(setup);
 
 			var runtime = IronRuby.Ruby.CreateRuntime(sr);
+			
 			var memoryStream = new MemoryStream();
 			runtime.IO.SetOutput(memoryStream, Encoding.UTF8);
 

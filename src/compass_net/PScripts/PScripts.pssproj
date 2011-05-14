@@ -20,7 +20,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="compass.ps1" />
+    <Compile Include="compass.psm1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="init.ps1">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Target Name="Build" />
 </Project>

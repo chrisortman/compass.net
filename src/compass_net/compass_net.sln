@@ -9,6 +9,13 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CompassHost", "CompassHost\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{A8A4BC60-7EEC-4D41-9AEE-D6A0433C8892}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAC17566-358F-4B90-BF70-103F609B5386}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Rakefile = ..\..\Rakefile
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "..\TestWebApp\TestWebApp.csproj", "{333321D7-8DD9-439B-B429-0809C884CC7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +66,16 @@ Global
 		{A8A4BC60-7EEC-4D41-9AEE-D6A0433C8892}.Release|Mixed Platforms.Build.0 = Release|x86
 		{A8A4BC60-7EEC-4D41-9AEE-D6A0433C8892}.Release|x86.ActiveCfg = Release|x86
 		{A8A4BC60-7EEC-4D41-9AEE-D6A0433C8892}.Release|x86.Build.0 = Release|x86
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{333321D7-8DD9-439B-B429-0809C884CC7C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

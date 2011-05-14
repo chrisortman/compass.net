@@ -23,8 +23,10 @@
   <ItemGroup>
     <None Include="Program.rb" />
     <None Include="Program.rb" />
+    <None Include="Program.rb" />
   </ItemGroup>
   <ItemGroup>
+    <SearchPath Include="E:\Code\compass_net\tools\" />
     <SearchPath Include="E:\Code\compass_net\tools\" />
   </ItemGroup>
 </Project>
