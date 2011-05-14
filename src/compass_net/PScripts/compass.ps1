@@ -9,12 +9,12 @@ function Invoke-Compass
 	
 	$ir_path = "e:\code\nugetpackages\ironruby\lib"
 	$compass_net_path = "e:\Code\compass_net\src\compass_net\compass_net\Program.rb";
-	$args = [String[]] @( $command )
+	$argsArray = 
 	Get-ChildItem -Path $ir_path -Include *.dll -recurse | %{ Add-Type -Path $_ }
 
 	$rubyLanguage = [IronRuby.Ruby]::CreateRubySetup();
 	$rubyLanguage.Options.Add("SearchPaths","E:\Code\compass_net\tools\compass-0.11.1\lib")
-	$rubyLanguage.Options.Add("Arguments",$args)
+	$rubyLanguage.Options.Add("Arguments",$command.Split(' '))
 	
 	$scriptRuntimeSetup = new-object -type Microsoft.Scripting.Hosting.ScriptRuntimeSetup
 	$scriptRuntimeSetup.LanguageSetups.Add($rubyLanguage)
@@ -35,4 +35,10 @@ function Invoke-Compass
 	Write-Host $text
 }
 
-Invoke-Compass -command 'help'
+function Init-Compass 
+{
+ 	param($template = 'blueprint/semantic')
+ 
+ 	Invoke-Compass -Command "init --using blueprint/semantic --sass-dir 'sass' --css-dir 'css' --javascripts-dir 'javascripts' --images-dir 'images'"
+}
+ 
