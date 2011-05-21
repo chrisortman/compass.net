@@ -26,6 +26,9 @@
     <Content Include="init.ps1">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Uninstall.ps1">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Target Name="Build" />
 </Project>

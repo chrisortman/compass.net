@@ -14,7 +14,8 @@ function Invoke-Compass
     $project = (Get-Project)
     $compass_install_path = (Split-Path -Parent $project.Fullname | Join-Path -ChildPath "Content")
 	$rubyLanguage = [IronRuby.Ruby]::CreateRubySetup();
-	$rubyLanguage.Options.Add("SearchPaths","E:\Code\compass_net\tools\compass-0.11.1\lib")
+    $searchPaths = (Split-Path -Parent $compass_net_path | Join-Path -Childpath "compass-0.11.1" | Join-Path -ChildPath  "lib")
+	$rubyLanguage.Options.Add("SearchPaths",$searchPaths)
 	$rubyLanguage.Options.Add("Arguments", ($compass_install_path + ' ' + $command).Split(' '))
 	
 	$scriptRuntimeSetup = new-object -type Microsoft.Scripting.Hosting.ScriptRuntimeSetup
@@ -38,9 +39,10 @@ function Invoke-Compass
 
 function Initialize-Compass 
 {
- 	param($template = 'blueprint/semantic')
- 
- 	Invoke-Compass -Command "init --using blueprint/semantic --sass-dir 'sass' --css-dir 'css' --javascripts-dir 'javascripts' --images-dir 'images'"
+ 	param($Template = 'blueprint/semantic', $SassDir = 'sass', $CssDir = 'css', $JavascriptsDir = 'javascripts', $ImagesDir = 'images', $ExtraArgs = '' )
+    $compass_args = "init --using $Template --sass-dir $SassDir --css-dir $CssDir --javascripts-dir $JavascriptsDir --images-dir $ImagesDir $ExtraArgs"
+    Write-Host $compass_args
+    Invoke-Compass -Command $compass_args
 }
  
 Export-ModuleMember Invoke-Compass
