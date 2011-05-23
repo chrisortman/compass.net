@@ -60,12 +60,18 @@
     <Reference Include="FSharp.Core" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompassHost.fs" />
-    <None Include="Script.fsx" />
     <None Include="packages.config" />
+    <Compile Include="Signatures.fsi" />
+    <Compile Include="Cmdlets.fs" />
+    <Compile Include="Testing.fs" />
+    <None Include="Script.fsx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />

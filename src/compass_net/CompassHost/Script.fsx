@@ -2,8 +2,4 @@
 // It can be used to explore and test the library project.
 // Note that script files will not be part of the project build.
 
-let ensure_array(commandLine:string[]) =     
-    commandLine
-
-ensure_array [|"Hello";"World"|]
-
+    

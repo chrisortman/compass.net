@@ -11,7 +11,8 @@ $packagePath = (Split-Path -Parent $installPath)
 $rubyDir = Get-ChildItem -Path "$packagePath\IronRuby*" -Name
 $irPath =  Join-Path -Path $packagePath -ChildPath $rubyDir | Join-Path -ChildPath "Lib"
 Get-ChildItem -Path $irPath -Include *.dll -recurse | %{ Add-Type -Path $_; Write-Host "Added types from $_" }
-
+ $compass_net_path = (Join-Path -Path $toolsPath -ChildPath "Program.rb")
+ 
 function global:Print-Stuff 
 {
 	Write-Host $irPath
@@ -20,10 +21,7 @@ function global:Print-Stuff
 function global:Invoke-Compass 
 {
 	param($command = 'version')
-		
-    $compass_net_path = (Join-Path -Path $toolsPath -ChildPath "Program.rb")
-	
-	
+			
     $project = (Get-Project)
     $compass_install_path = (Split-Path -Parent $project.Fullname | Join-Path -ChildPath "Content")
 	
@@ -54,14 +52,9 @@ function global:Invoke-Compass
 function global:Initialize-Compass 
 {
  	param($Template = 'blueprint/semantic', $SassDir = 'sass', $CssDir = 'css', $JavascriptsDir = 'javascripts', $ImagesDir = 'images', $ExtraArgs = '' )
-    $compass_args = "init --using $Template --sass-dir '$SassDir' --css-dir '$CssDir' --javascripts-dir '$JavascriptsDir' --images-dir '$ImagesDir' $ExtraArgs"
+    $compass_args = "init --using $Template --sass-dir $SassDir --css-dir $CssDir --javascripts-dir $JavascriptsDir --images-dir $ImagesDir $ExtraArgs"
  	#Invoke-Compass -Command "init --using blueprint/semantic --sass-dir 'sass' --css-dir 'css' --javascripts-dir 'javascripts' --images-dir 'images'"
     Write-Host $compass_args
     Invoke-Compass -Command $compass_args
 }
  
-#Export-ModuleMember Invoke-Compass
-#Export-ModuleMember Initialize-Compass
-
-
-#Import-Module (Join-Path $toolsPath compass.psm1)
