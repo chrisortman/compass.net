@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Management.Automation;
+using System.Reflection;
 using System.Text;
 
 namespace Compass.Commands {
@@ -12,15 +13,18 @@ namespace Compass.Commands {
 		public string Command { get; set; }
 
 		protected override void ProcessRecord() {
-			var ir_path =  "e:\\code\\nugetpackages\\ironruby\\lib";
-			var compass_net_path = "e:\\Code\\compass_net\\src\\compass_net\\Program.rb";
+
+			var locationOfDll = Assembly.GetExecutingAssembly().Location;
+
+			var rubyProgramPath = Path.Combine(Path.GetDirectoryName(locationOfDll), "Program.rb");
+			var searchPaths = Path.Combine(Path.GetDirectoryName(locationOfDll), "compass-0.11.1\\lib");
 
 			var arguments = new List<string>(Command.Trim().Split(' '));
 			arguments.Insert(0, AppDomain.CurrentDomain.BaseDirectory);
 
 			var setup = IronRuby.Ruby.CreateRubySetup();
 			
-			setup.Options.Add("SearchPaths", "E:\\Code\\compass_net\\tools\\compass-0.11.1\\lib");
+			setup.Options.Add("SearchPaths", searchPaths);
 			setup.Options.Add("Arguments", arguments.ToArray());
 
 			var sr = new Microsoft.Scripting.Hosting.ScriptRuntimeSetup();
@@ -32,7 +36,7 @@ namespace Compass.Commands {
 			runtime.IO.SetOutput(memoryStream, Encoding.UTF8);
 
 			var engine = runtime.GetEngineByFileExtension(".rb");
-			engine.ExecuteFile(compass_net_path);
+			engine.ExecuteFile(rubyProgramPath);
 
 			memoryStream.Seek(0, SeekOrigin.Begin);
 			var reader = new StreamReader(runtime.IO.OutputStream);

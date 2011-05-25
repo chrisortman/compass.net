@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Helpers\CmdletExtensions.cs" />
     <Compile Include="Helpers\MockCommandRuntime.cs" />
+    <Compile Include="Helpers\RunsInPowershellTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanityChecks.cs" />
   </ItemGroup>

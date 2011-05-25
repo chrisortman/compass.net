@@ -25,4 +25,21 @@ namespace CmdletTests
 			results.First().ShouldContain("Compass 0.11.1 (Antares)");
 		}
 	}
+
+	public class When_running_in_real_powershell : RunsInPowershellTest {
+		
+		[Fact]
+		public void CanSayHello() {
+
+			var psOutput = ExecuteCommands("Write-Hello -Name Chris");
+			psOutput.ShouldBe("Hello Chris");
+		}
+
+		[Fact]
+		public void Can_get_compass_version() {
+			ExecuteCommands("Invoke-Compass -Command version").ShouldContain("Compass 0.11.1 (Antares)");
+		}
+
+
+	}
 }

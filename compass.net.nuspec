@@ -26,10 +26,10 @@ YUI
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\**\*" target="tools" />
-    <file src="src\compass_net\PScripts\*.psm1" target="tools" />    
-	<file src="src\compass_net\PScripts\*.ps1" target="tools" />    
-    <file src="src\compass_net\compass_net\Program.rb" target="tools" />
+    <file src="tools\**\*" target="tools" />    
+	<file src="src\PScripts\*.ps1" target="tools" />    
+    <file src="src\compass_net\Program.rb" target="tools" />
+	<file src="src\Compass.Commands\bin\debug\*.dll" target="tools" />
     <file src="README.md" target="content\App_ReadMe" />
   </files>
 </package>

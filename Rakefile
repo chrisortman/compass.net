@@ -8,3 +8,9 @@ task :unpack_compass do
   Dir.chdir '..'
 end
 
+task :local_nuget do
+  rm 'compass.net.0.0.1.nupkg'
+  sh 'nuget pack compass.net.nuspec'
+  cp 'compass.net.0.0.1.nupkg', 'e:\\mynugetpackages'
+end
+

@@ -72,6 +72,7 @@
     <Compile Include="CompassSnapIn.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DebugCompassCommand.cs" />
     <Compile Include="InvokeCompassCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WriteHelloCommand.cs" />
