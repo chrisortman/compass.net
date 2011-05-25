@@ -3,6 +3,7 @@
 open System
 open System.Management.Automation
 
+
 [<Cmdlet("Write","Hello",DefaultParameterSetName="Name")>]
 type WriteHelloCommand = class
     inherit Cmdlet
@@ -20,5 +21,8 @@ type WriteHelloCommand = class
       x.WriteObject("Hello " + x.name)
 end
 
+
+let GetCommand =
+    new WriteHelloCommand()
 
 

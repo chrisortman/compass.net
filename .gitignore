@@ -14,4 +14,4 @@ _ReSharper*
 
 *.nupkg
 TestResults
-src/compass_net/packages
+src/packages
