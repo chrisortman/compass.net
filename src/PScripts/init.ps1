@@ -4,3 +4,4 @@ param($installPath = "e:\Code\compass_net\src\compass_net\packages\compass.net.0
 $env:HOME = (Join-Path -Path $env:HOMEDRIVE $env:HOMEPATH)
 
  Import-Module -Name (Join-Path -Path $toolsPath -ChildPath "Compass.Commands.dll")
+ Import-Module (Join-Path $toolsPath compass.psm1)
