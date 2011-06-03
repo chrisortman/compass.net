@@ -76,6 +76,7 @@
     <Compile Include="Helpers\VisualStudio\MessageFilter.cs" />
     <Compile Include="Helpers\VisualStudio\VisualStudioTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RubyPathLoader.cs" />
     <Compile Include="SanityChecks.cs" />
     <Compile Include="VisualStudioIntegration.cs" />
   </ItemGroup>
@@ -86,6 +87,10 @@
     <ProjectReference Include="..\..\src\Compass.Commands\Compass.Commands.csproj">
       <Project>{2A0E0F55-9091-448D-998A-F628462C2F6C}</Project>
       <Name>Compass.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Compass\Compass.csproj">
+      <Project>{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}</Project>
+      <Name>Compass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

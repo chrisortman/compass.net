@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compass.Commands", "Compass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdletTests", "..\test\CmdletTests\CmdletTests.csproj", "{46CAE3CC-B4C2-4ECD-BB71-83C14197DFFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compass", "Compass\Compass.csproj", "{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,12 @@ Global
 		{46CAE3CC-B4C2-4ECD-BB71-83C14197DFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46CAE3CC-B4C2-4ECD-BB71-83C14197DFFF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46CAE3CC-B4C2-4ECD-BB71-83C14197DFFF}.Release|x86.ActiveCfg = Release|Any CPU
+		{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDAE007F-A8AC-4918-ABC0-889B4DE2D3F8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

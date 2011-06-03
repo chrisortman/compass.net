@@ -15,3 +15,5 @@ _ReSharper*
 *.nupkg
 TestResults
 src/packages
+example/CompassSample/packages
+.sass-cache
