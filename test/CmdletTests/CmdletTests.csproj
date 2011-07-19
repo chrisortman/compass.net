@@ -76,7 +76,7 @@
     <Compile Include="Helpers\VisualStudio\MessageFilter.cs" />
     <Compile Include="Helpers\VisualStudio\VisualStudioTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RubyPathLoader.cs" />
+    <Compile Include="PathLoadingTests.cs" />
     <Compile Include="SanityChecks.cs" />
     <Compile Include="VisualStudioIntegration.cs" />
   </ItemGroup>

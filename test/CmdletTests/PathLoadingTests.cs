@@ -23,6 +23,14 @@ namespace CmdletTests {
 			paths.ShouldContain(Path.Combine(_baseDirectory,"sass-1.2\\lib"));
 		}
 
+		[Fact]
+		public void DiscoverSassPaths() {
+			var loader = new RubyPathLoader();
+			var sassPaths = loader.DiscoverSassPaths(_baseDirectory);
+			sassPaths.ShouldContain(Path.Combine(_baseDirectory,"compass-0.11.1","frameworks","blueprint","stylesheets"));
+			sassPaths.ShouldContain(Path.Combine(_baseDirectory,"compass-0.11.1","frameworks","compass","stylesheets"));
+		}
+
 		public void Dispose() {
 			Directory.Delete(_baseDirectory, true);
 		}
